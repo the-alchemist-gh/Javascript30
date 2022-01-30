@@ -26,11 +26,37 @@
 
     // Some and Every Checks
     // Array.prototype.some() // is at least one person 19 or older?
+    const ageMeter = people.some(function(age){
+      const noteAge = 2022 - age.year;
+      if(noteAge >= 19){
+        return true;
+      };
+      // console.log((2022 - age.year) > 19);
+    })
+    console.log(ageMeter)
+
     // Array.prototype.every() // is everyone 19 or older?
+    const AgeOlder = people.every(function (age){
+      const noteAge = 2022 - age.year;
+      if(noteAge >= 19){
+        return true
+      } else {
+        return false
+      }
+
+      // console.log(age.year);
+    })
+    console.log(AgeOlder);
 
     // Array.prototype.find()
     // Find is like filter, but instead returns just the one you are looking for
     // find the comment with the ID of 823423
+  const findCom = comments.find(function (wrd){
+    return wrd.id === 823423
+    // console.log(wrd.id);
+  });
+      console.log(findCom);
+ 
 
     // Array.prototype.findIndex()
     // Find the comment with this ID
